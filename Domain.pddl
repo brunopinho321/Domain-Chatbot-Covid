@@ -96,7 +96,7 @@
         (can-show-info-about-the-restrictions-to-buy)
 
         
-        
+        (can-call-health-agent)
         (can-call-diagnostic-system)
         (can-show-ask-user-grade)
         (can-do-start-dialog)
@@ -533,7 +533,7 @@
             (and 
                 (send-info-phone-number)
                 (have-patient-phone-number)
-                (can-do-human-take-control-dialog)
+                (can-call-health-agent)
             )
             ;outcome Error
             (and
@@ -542,12 +542,33 @@
         )
     )
    
-     (:action health-agent-takes-control
+    (:action call-health-agent
+        :parameters ()
+        :precondition (and (can-call-health-agent)
+            (not (can-go-error-treatment))
+        )
+        :effect (oneof 
+            
+            ;outcome call-agent
+            (and
+                (can-call-health-agent)
+            )
+            ;outcome agent-takes-control
+            (and
+                (can-do-human-take-control-dialog)
+                (not (can-call-health-agent))
+            )
+        )
+    )
+    
+
+    (:action health-agent-takes-control
         :parameters ()
         :precondition (and (can-do-human-take-control-dialog)
        		(not(can-go-error-treatment))	
        	)
         :effect (oneof 
+
             ;outcome another-human-control-the-dialog
             (and 
                 (can-do-human-take-control-dialog)
