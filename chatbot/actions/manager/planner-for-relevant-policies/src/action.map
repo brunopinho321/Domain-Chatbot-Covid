@@ -1,0 +1,310 @@
+
+show-info-about-how-to-protect-from-virus:
+1: [] -> ['can-show-info-about-main-prevention-measure()'] / [] -> ['not(can-show-info-protect())']
+2: [] -> ['can-show-info-about-wear-mask()'] / [] -> ['not(can-show-info-protect())']
+3: [] -> ['can-show-info-about-homemade-mask-look-like()'] / [] -> ['not(can-show-info-protect())']
+4: [] -> ['can-show-info-about-homemade-mask-use()'] / [] -> ['not(can-show-info-protect())']
+5: [] -> ['can-show-info-about-wash-hands-correctly()'] / [] -> ['not(can-show-info-protect())']
+6: [] -> ['can-show-info-about-health-professional-protection()'] / [] -> ['not(can-show-info-protect())']
+7: [] -> ['can-go-error-treatment()']
+8: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-protect())']
+9: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-protect())']
+
+show-info-about-homemade-mask-use:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-homemade-mask-use())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-homemade-mask-use())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-disease-present-itself:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-disease-present-itself())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-disease-present-itself())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-mental-health:
+1: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-mental-health())']
+2: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-show-info-mental-health())'] / [] -> ['can-back-dialog()']
+3: [] -> ['can-show-info-mental-health()'] / [] -> ['not(can-back-dialog())'] / [] -> ['can-go-error-treatment()']
+
+show-info-about-people-affected-by-covid:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-people-affected-by-covid())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-people-affected-by-covid())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-when-feel-the-symptoms:
+1: [] -> ['can-show-info-about-should-see-the-doctor()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+2: [] -> ['can-show-info-about-where-to-get-care()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+3: [] -> ['can-show-info-about-the-diagnostic-of-the-covid()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+4: [] -> ['can-show-info-about-who-is-the-exam-for()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+5: [] -> ['can-show-info-about-home-isolation()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+6: [] -> ['can-show-info-about-when-home-isolation-is-necessary()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+7: [] -> ['can-show-info-about-social-distancing()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+8: [] -> ['can-show-info-about-the-cases-need-hospitalization()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+9: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+10: [] -> ['can-go-error-treatment()'] / [] -> ['can-show-info-when-feel-symptoms()']
+11: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-when-feel-symptoms())']
+
+show-info-about-the-restrictions-to-buy:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-the-restrictions-to-buy())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-the-restrictions-to-buy())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-the-diagnostic-of-the-covid:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-the-diagnostic-of-the-covid())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-the-diagnostic-of-the-covid())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-info-name:
+1: [] -> ['send-info-name()'] / [] -> ['have-patient-name()'] / [] -> ['not(can-do-ask-patient-info-name())'] / [] -> ['can-do-ask-patient-info-birthday()']
+2: [] -> ['not(send-info-name())'] / [] -> ['can-do-ask-patient-info-name()'] / [] -> ['not(have-patient-name())'] / [] -> ['can-go-error-treatment()']
+
+show-info-about-the-cases-need-hospitalization:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-the-cases-need-hospitalization())']
+2: [] -> ['not(can-show-info-about-the-cases-need-hospitalization())'] / [] -> ['can-show-ask-user-grade()']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-the-risk-group:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-the-risk-group())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-the-risk-group())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-covid-kill:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-covid-kill())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-covid-kill())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-main-prevention-measure:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-main-prevention-measure())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-main-prevention-measure())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-myths-and-truths:
+1: [] -> ['can-show-info-about-pets-spread-covid()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+2: [] -> ['can-show-info-about-people-affected-by-covid()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+3: [] -> ['can-show-info-about-antibiotics-effects()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+4: [] -> ['can-show-info-about-medicine-for-covid()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+5: [] -> ['can-show-info-about-covid-survive-in-surface()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+6: [] -> ['can-show-info-about-covid-kill()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+7: [] -> ['can-show-info-about-the-restrictions-to-buy()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+8: [] -> ['can-back-dialog()'] / [] -> ['can-do-start-dialog()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+9: [] -> ['can-go-error-treatment()'] / [] -> ['can-show-info-myths-truths-covid()']
+10: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-myths-truths-covid())']
+
+ask-patient-info-phone-number:
+1: [] -> ['send-info-phone-number()'] / [] -> ['have-patient-phone-number()'] / [] -> ['can-call-health-agent()']
+2: [] -> ['can-go-error-treatment()']
+
+ask-share-location:
+1: [] -> ['send-info-location()'] / [] -> ['not(can-do-ask-share-location())'] / [] -> ['not(have-patient-location())'] / [] -> ['can-do-ask-postal-code()']
+2: [] -> ['not(can-do-ask-share-location())'] / [] -> ['can-show-info-calling-health-profitional()'] / [] -> ['have-patient-location()'] / [] -> ['send-info-location()']
+
+show-info-about-homemade-mask-look-like:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-homemade-mask-look-like())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-homemade-mask-look-like())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-covid-survive-in-surface:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-covid-survive-in-surface())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-covid-survive-in-surface())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-user-grade:
+1: [] -> ['send-grade()'] / [] -> ['can-finish-service()'] / [] -> ['not(can-show-ask-user-grade())']
+2: [] -> ['can-go-error-treatment()']
+
+show-info-about-disease-spread:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-disease-spread())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-disease-spread())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-main-symptoms:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-main-symptoms())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-main-symptoms())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-postal-code:
+1: [] -> ['send-info-postal-code()'] / [] -> ['not(can-do-ask-postal-code())'] / [] -> ['have-patient-postal-code()'] / [] -> ['can-show-info-calling-health-profitional()']
+2: [] -> ['can-go-error-treatment()']
+
+show-info-about-disease-transmitted-through-the-air:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-disease-transmitted-through-the-air())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-disease-transmitted-through-the-air())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-home-isolation:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-home-isolation())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-home-isolation())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-comorbidities:
+1: [] -> ['have-patient-comorbidities()'] / [] -> ['can-do-ask-patient-info-gender()'] / [] -> ['send-info-comorbidities()']
+2: [] -> ['can-do-ask-patient-comorbidities()'] / [] -> ['not(have-patient-comorbidities())'] / [] -> ['not(send-info-comorbidities())'] / [] -> ['can-go-error-treatment()']
+
+show-info-about-new-corona-virus:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-new-coronavirus())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-new-coronavirus())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-info-pregmant-woman:
+1: [] -> ['have-patient-pregnant-info()'] / [] -> ['send-info-pregnant-info()'] / [] -> ['can-do-ask-patient-info-phone-number()']
+2: [] -> ['can-go-error-treatment()']
+
+ask-patient-info-cpf:
+1: [] -> ['send-info-cpf()'] / [] -> ['not(can-do-ask-patient-info-cpf())'] / [] -> ['have-patient-cpf()'] / [] -> ['can-do-ask-patient-info-name()']
+2: [] -> ['can-go-error-treatment()']
+
+health-agent-takes-control:
+1: [] -> ['can-do-human-take-control-dialog()']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-do-human-take-control-dialog())']
+
+show-info-about-wear-mask:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-wear-mask())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-wear-mask())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-the-riscs:
+1: [] -> ['can-show-info-about-disease-present-itself()'] / [] -> ['not(can-show-info-riscs())']
+2: [] -> ['can-show-info-about-disease-spread()'] / [] -> ['not(can-show-info-riscs())']
+3: [] -> ['can-show-info-about-disease-transmitted-through-the-air()'] / [] -> ['not(can-show-info-riscs())']
+4: [] -> ['can-show-info-about-worried-about-this-disease()'] / [] -> ['not(can-show-info-riscs())']
+5: [] -> ['can-show-info-about-the-risk-group()'] / [] -> ['not(can-show-info-riscs())']
+6: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-riscs())']
+7: [] -> ['can-go-error-treatment()'] / [] -> ['can-show-info-riscs()']
+8: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-riscs())']
+
+show-welcome-message:
+1: [] -> ['started()'] / [] -> ['can-do-start-dialog()'] / [] -> ['not(user-initiative())']
+
+start-online-service:
+1: [] -> ['not(can-start-online-service())'] / [] -> ['can-do-ask-patient-symptoms()']
+
+call-diagnostic-system:
+1: [] -> ['send-info-diagnostic-system()'] / [] -> ['not(can-call-diagnostic-system())'] / [] -> ['have-diagnostic-system-positive()'] / [] -> ['can-do-show-info-diagnostic-positive()']
+2: [] -> ['send-info-diagnostic-system()'] / [] -> ['not(have-diagnostic-system-positive())'] / [] -> ['not(can-call-diagnostic-system())'] / [] -> ['can-do-show-info-diagnostic-negative()']
+
+show-info-about-covid:
+1: [] -> ['can-show-info-new-coronavirus()'] / [] -> ['not(can-show-info-about-covid())']
+2: [] -> ['can-show-info-protect()'] / [] -> ['not(can-show-info-about-covid())']
+3: [] -> ['can-show-info-main-symptoms()'] / [] -> ['not(can-show-info-about-covid())']
+4: [] -> ['can-show-info-treatments()'] / [] -> ['not(can-show-info-about-covid())']
+5: [] -> ['can-show-info-riscs()'] / [] -> ['not(can-show-info-about-covid())']
+6: [] -> ['can-show-info-when-feel-symptoms()'] / [] -> ['not(can-show-info-about-covid())']
+7: [] -> ['can-show-info-myths-truths-covid()'] / [] -> ['not(can-show-info-about-covid())']
+8: [] -> ['can-show-info-covid-ce()'] / [] -> ['not(can-show-info-about-covid())']
+9: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-covid())']
+10: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-covid())']
+11: [] -> ['can-go-error-treatment()']
+12: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-covid())']
+
+show-info-about-antibiotics-effects:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-antibiotics-effects())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-antibiotics-effects())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-social-distancing:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-social-distancing())']
+2: [] -> ['can-show-ask-user-grade()']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-info-gender:
+1: [] -> ['have-patient-gender()'] / [] -> ['not(have-patient-gender-f())'] / [] -> ['send-info-gender()'] / [] -> ['can-do-ask-patient-info-phone-number()']
+2: [] -> ['have-patient-gender-f()'] / [] -> ['have-patient-gender()'] / [] -> ['send-info-gender()'] / [] -> ['can-do-ask-patient-info-pregnant-woman()']
+3: [] -> ['send-info-gender()'] / [] -> ['not(have-patient-gender-f())'] / [] -> ['not(have-patient-gender())'] / [] -> ['can-do-ask-patient-info-phone-number()']
+4: [] -> ['can-go-error-treatment()']
+
+show-info-about-the-treatments:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-treatments())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-treatments())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-info-birthday:
+1: [] -> ['have-patient-birthday()'] / [] -> ['not(can-do-ask-patient-info-birthday())'] / [] -> ['send-info-birthday()'] / [] -> ['can-do-ask-patient-comorbidities()']
+2: [] -> ['can-go-error-treatment()']
+
+show-info-about-worried-about-this-disease:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-worried-about-this-disease())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-worried-about-this-disease())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-diagnostic-negative:
+1: [] -> ['not(can-do-show-info-diagnostic-negative())'] / [] -> ['can-show-ask-user-grade()']
+
+show-info-about-health-professional-protection:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-health-professional-protection())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-health-professional-protection())']
+3: [] -> ['can-go-error-treatment()']
+
+ask-patient-how-many-days-symptoms:
+1: [] -> ['send-info-days-symptoms()'] / [] -> ['have-patient-days-symptoms()'] / [] -> ['can-call-diagnostic-system()'] / [] -> ['not(can-do-ask-patient-how-many-days-symptoms())']
+2: [] -> ['can-go-error-treatment()']
+
+start-dialog:
+1: [] -> ['can-start-online-service()'] / [] -> ['not(can-do-start-dialog())'] / [] -> ['not(can-back-dialog())']
+2: [] -> ['can-show-info-about-covid()'] / [] -> ['not(can-do-start-dialog())'] / [] -> ['not(can-back-dialog())']
+3: [] -> ['can-show-info-mental-health()'] / [] -> ['not(can-do-start-dialog())'] / [] -> ['not(can-back-dialog())']
+4: [] -> ['can-show-info-others()'] / [] -> ['not(can-do-start-dialog())'] / [] -> ['not(can-back-dialog())']
+5: [] -> ['can-go-error-treatment()']
+
+show-info-about-covid-in-ceara:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-covid-ce())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-covid-ce())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-medicine-for-covid:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-medicine-for-covid())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-medicine-for-covid())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-others:
+1: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-others())']
+2: [] -> ['not(can-show-info-others())'] / [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-should-see-the-doctor:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-should-see-the-doctor())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-should-see-the-doctor())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-diagnostic-positive:
+1: [] -> ['not(can-do-show-info-diagnostic-positive())'] / [] -> ['can-do-ask-share-location()']
+
+show-info-about-where-to-get-care:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-where-to-get-care())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-where-to-get-care())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-when-home-isolation-is-necessasry:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-when-home-isolation-is-necessary())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-when-home-isolation-is-necessary())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-calling-health-profitional:
+1: [] -> ['not(can-show-info-calling-health-profitional())'] / [] -> ['can-do-ask-patient-info-cpf()']
+
+call-health-agent:
+1: [] -> ['can-call-health-agent()']
+2: [] -> ['can-do-human-take-control-dialog()'] / [] -> ['not(can-call-health-agent())']
+
+ask-patient-symptoms:
+1: [] -> ['send-info-symptoms()'] / [] -> ['have-patient-symptoms()'] / [] -> ['can-do-ask-patient-how-many-days-symptoms()'] / [] -> ['not(can-do-ask-patient-symptoms())']
+2: [] -> ['can-go-error-treatment()']
+
+show-info-about-who-is-the-exam-for:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['not(can-go-error-treatment())'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-who-is-the-exam-for())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-who-is-the-exam-for())']
+3: [] -> ['can-go-error-treatment()']
+
+show-info-about-pets-spread-covid:
+1: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-pets-spread-covid())']
+2: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-pets-spread-covid())']
+3: [] -> ['can-go-error-treatment()']
+
+error-treatment:
+1: [] -> ['not(can-go-error-treatment())']
+
+show-info-about-wash-hands-correctly:
+1: [] -> ['can-show-ask-user-grade()'] / [] -> ['not(can-show-info-about-wash-hands-correctly())']
+2: [] -> ['can-do-start-dialog()'] / [] -> ['can-back-dialog()'] / [] -> ['not(can-show-info-about-wash-hands-correctly())']
+3: [] -> ['can-go-error-treatment()']
+
+finish-service:
+1: [] -> ['goal()']

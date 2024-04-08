@@ -1,0 +1,168 @@
+version: "3.1"
+
+stories:
+
+- story: main path
+  steps:
+  - intent: user-initiative
+  - action: global_action
+
+  - intent: can-start-online-service
+  - action: global_action
+
+  - intent: can-show-info-others
+  - action: global_action
+
+  - intent: can-show-info-mental-health
+  - action: global_action
+
+  - intent: can-show-info-about-covid
+  - action: global_action
+
+  - intent: can-show-info-new-coronavirus
+  - action: global_action
+
+  - intent: can-show-info-protect
+  - action: global_action
+
+  - intent: can-show-info-treatments
+  - action: global_action
+
+  - intent: can-show-info-riscs
+  - action: global_action
+
+  - intent: can-show-info-when-feel-symptoms
+  - action: global_action
+
+  - intent: can-show-info-myths-truths-covid
+  - action: global_action
+
+  - intent: can-show-info-covid-ce
+  - action: global_action
+  
+  - intent: can-show-info-about-main-prevention-measure
+  - action: global_action
+
+  - intent: can-show-info-about-wear-mask
+  - action: global_action
+
+  - intent: can-show-info-about-homemade-mask-look-like
+  - action: global_action
+
+  - intent: can-show-info-about-homemade-mask-use
+  - action: global_action
+
+  - intent: can-show-info-about-wash-hands-correctly
+  - action: global_action
+
+  - intent: can-show-info-about-health-professional-protection
+  - action: global_action
+
+  - intent: can-show-info-about-disease-present-itself
+  - action: global_action
+
+  - intent: can-show-info-about-disease-spread
+  - action: global_action
+
+  - intent: can-show-info-about-disease-transmitted-through-the-air
+  - action: global_action
+
+  - intent: can-show-info-about-worried-about-this-disease
+  - action: global_action
+  
+  - intent: can-show-info-about-the-risk-group
+  - action: global_action
+
+  - intent: can-show-info-about-should-see-the-doctor
+  - action: global_action
+
+  - intent: can-show-info-about-where-to-get-care
+  - action: global_action
+
+  - intent: can-show-info-about-the-diagnostic-of-the-covid
+  - action: global_action
+
+  - intent: can-show-info-about-who-is-the-exam-for
+  - action: global_action
+
+  - intent: can-show-info-about-home-isolation
+  - action: global_action
+
+  - intent: can-show-info-about-when-home-isolation-is-necessary
+  - action: global_action
+
+  - intent: can-show-info-about-social-distancing
+  - action: global_action
+
+  - intent: can-show-info-about-the-cases-need-hospitalization
+  - action: global_action
+
+  - intent: can-show-info-about-pets-spread-covid
+  - action: global_action
+
+  - intent: can-show-info-about-people-affected-by-covid
+  - action: global_action
+
+  - intent: can-show-info-about-antibiotics-effects
+  - action: global_action
+
+  - intent: can-show-info-about-medicine-for-covid
+  - action: global_action
+
+  - intent: can-show-info-about-covid-survive-in-surface
+  - action: global_action
+
+  - intent: can-show-info-about-covid-kill
+  - action: global_action 
+
+  - intent: can-show-info-about-the-restrictions-to-buy
+  - action: global_action
+
+  - intent: can-call-diagnostic-system
+  - action: global_action
+
+  - intent: can-show-ask-user-grade
+  - action: global_action
+
+  - intent: can-start-dialog
+  - action: global_action
+
+  - intent: can-back-dialog
+  - action: global_action
+
+  - intent: send-grade
+  - action: global_action
+
+  - intent: send-info-name
+  - action: global_action
+
+  - intent: send-info-cpf
+  - action: global_action
+
+  - intent: send-info-birthday
+  - action: global_action
+
+  - intent: send-info-comorbidities
+  - action: global_action
+
+  - intent: send-info-symptoms
+  - action: global_action
+
+  - intent: send-info-days-symptoms
+  - action: global_action
+
+  - intent: send-info-location
+  - action: global_action
+
+  - intent: send-info-postal-code
+  - action: global_action 
+
+  - intent: send-info-gender
+  - action: global_action
+
+  - intent: send-info-pregnant-info
+  - action: global_action
+
+  - intent: can-go-error-treatment
+  - action: global_action
+

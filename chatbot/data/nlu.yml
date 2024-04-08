@@ -1,0 +1,548 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+
+- intent: user-initiative
+  examples: |
+    - olá
+    - ola
+    - oi
+    - boa tarde
+    - bom dia
+    - boa noite
+    - como vai
+    - tenho algumas duvidas 
+    - tenho alguns sintomas
+    - preciso de ajuda
+    - quero ajuda
+    - estou doente
+
+- intent: send-info-name
+  examples: |
+    - [Antônia Edival de Sousa Rodrigues]{"entity": "have-patient-name"}
+    - Meu nome é [Bruno da Silva Pinho]{"entity": "have-patient-name"}
+    - [José Vitorino da Costa]{"entity": "have-patient-name"}
+    - É [José Vitorino da Costa]{"entity": "have-patient-name"}
+    - Meu nome é [José Vitoria da Costa]{"entity": "have-patient-name"}
+    - [Antônio Edival de Sousa Rodrigues]{"entity": "have-patient-name"}
+    - Meu nome é [Antonio Edival de Sousa Rodrigues]{"entity": "have-patient-name"}
+    - [Ladyjane de Sousa Lima]{"entity": "have-patient-name"}
+    - [Edglair Alves de Vasconcelos]{"entity": "have-patient-name"}
+    - [Antônia Evandisa Bezerra]{"entity": "have-patient-name"}
+    - [Christiane oliveira Collyer]{"entity": "have-patient-name"}
+    - [Rebeca Farias Jodão]{"entity": "have-patient-name"}
+    - [Antonio Antero de Almeida]{"entity": "have-patient-name"}
+    - [Thais Ribeiro do Nascimento]{"entity":"have-patient-name"}
+
+- intent: send-info-cpf
+  examples: |
+    - [15461998372]{"entity": "have-patient-cpf"}
+    - [154.619.983-72]{"entity": "have-patient-cpf"}
+    - [24447536315]{"entity": "have-patient-cpf"}
+    - [244.475.363-15]{"entity": "have-patient-cpf"}
+    - [03722383358]{"entity": "have-patient-cpf"}
+    - [037.223.833-58]{"entity": "have-patient-cpf"}
+    - [87250187368]{"entity": "have-patient-cpf"}
+    - [872.501.873-68]{"entity": "have-patient-cpf"}
+    - [65531760353]{"entity": "have-patient-cpf"}
+    - [655.317.603-53]{"entity": "have-patient-cpf"}
+    - [14597148736]{"entity": "have-patient-cpf"}
+    - [37824015300]{"entity": "have-patient-cpf"}
+    
+    
+- intent: send-info-birthday
+  examples: |
+    - [24/08/1958]{"entity": "have-patient-birthday"}
+    - [13/09/1961]{"entity": "have-patient-birthday"}
+    - [03/11/1987]{"entity": "have-patient-birthday"}
+    - [20/07/1975]{"entity": "have-patient-birthday"}
+    - [19/03/1978]{"entity": "have-patient-birthday"}
+    - [17/03/1974]{"entity": "have-patient-birthday"}
+    - [24/09/1993]{"entity": "have-patient-birthday"}
+    - [07/05/1953]{"entity": "have-patient-birthday"}
+    - [05/02/1995]{"entity": "have-patient-birthday"}
+   
+    
+- intent: send-info-comorbidities
+  examples: |
+    - não possuo [nenhum problema de saúde]{"entity" : "have-patient-comorbidities"}
+    - não possuo [nenhuma comorbidade]{"entity" : "have-patient-comorbidities"}
+    - não tenho [nemnhum problema de saúde]{"entity" : "have-patient-comorbidities"}
+    - utilizo [corticoides]{"entity" : "have-patient-comorbidities"}
+    - [corticoides]{"entity" : "have-patient-comorbidities"}
+    - eu tenho [HIV]{"entity" : "have-patient-comorbidities"}
+    - [HIV]{"entity" : "have-patient-comorbidities"}
+    - Possuo [lupus]{"entity" : "have-patient-comorbidities"}
+    - Tenho [cancer de pulmão]{"entity" : "have-patient-comorbidities"} 
+    - Tenho [cancer]{"entity" : "have-patient-comorbidities"}
+    - Fiz [transplante de cornia]{"entity" : "have-patient-comorbidities"}
+    - Fiz [transplante]{"entity" : "have-patient-comorbidities"}
+    - Tenho [asma]{"entity" : "have-patient-comorbidities"} 
+    - Possuo [asma]{"entity" : "have-patient-comorbidities"}
+    - [Diabetes]{"entity" : "have-patient-comorbidities"}
+    - [Pressão alta]{"entity" : "have-patient-comorbidities"} 
+    - [Problema respiratórios]{"entity" : "have-patient-comorbidities"} 
+    - [Problemas cardíacos]{"entity" : "have-patient-comorbidities"}
+    - [Deficiência imunológicas]{"entity" : "have-patient-comorbidities"}
+    - [Diabetes]{"entity" : "have-patient-comorbidities"}, [Pressão alta]{"entity" : "have-patient-comorbidities"} 
+    - [Problema respiratórios]{"entity" : "have-patient-comorbidities"}, [Problemas cardíacos]{"entity" : "have-patient-comorbidities"}
+    - [Diabetes]{"entity" : "have-patient-comorbidities"}, [Pressão alta]{"entity" : "have-patient-comorbidities"}, [Deficiência imunológicas]{"entity" : "have-patient-comorbidities"}
+    - [Problema respiratórios]{"entity" : "have-patient-comorbidities"}, [Problemas cardíacos]{"entity" : "have-patient-comorbidities"}, [Diabetes]{"entity" : "have-patient-comorbidities"}, [Pressão alta]{"entity" : "have-patient-comorbidities"} 
+    - [nenhum dos problemas acima]{"entity" : "have-patient-comorbidities"}
+- intent: send-info-symptoms
+  examples: |
+    - [Falta de ar]{"entity" : "have-patient-symptoms"}
+    - sinto [falta de ar]{"entity" : "have-patient-symptoms"} e [tosse incontrolável]{"entity" : "have-patient-symptoms"}
+    - [Mal-estar intenso]{"entity" : "have-patient-symptoms"}
+    - [Tosse incontrolável]{"entity" : "have-patient-symptoms"} 
+    - [Alargamento das narinas]{"entity" : "have-patient-symptoms"} durante a respiração
+    - [Febre acima de 37.8 persistente por mais de 48h]{"entity" : "have-patient-symptoms"}
+    - [Confusão mental]{"entity" : "have-patient-symptoms"}
+    - Nenhum dos sintomas acima
+
+- intent: send-info-days-symptoms
+  examples: |
+    - [2 dias]{"entity" : "have-patient-days-symptoms"}
+    - [1 dia]{"entity" : "have-patient-days-symptoms"}
+    - [3 dias]{"entity" : "have-patient-days-symptoms"}
+    - [4 dias]{"entity" : "have-patient-days-symptoms"}
+    - [5 dias]{"entity" : "have-patient-days-symptoms"} 
+    - [6 dias]{"entity" : "have-patient-days-symptoms"} 
+    - [7 dias]{"entity" : "have-patient-days-symptoms"} 
+    - [8 dias] {"entity" : "have-patient-days-symptoms"} 
+    - [9 dias]{"entity" : "have-patient-days-symptoms"} 
+    - [10 dias]{"entity" : "have-patient-days-symptoms"} 
+    
+- intent: send-info-location
+  examples: |
+    - [sim compartilhar localização]{"entity" : "have-patient-location"}
+    - [sim compartilhar minha localização]{"entity" : "have-patient-location"}
+    - [prefiro não declarar minha localização]{"entity":"not-have-patient-location"}
+    - [não declarar]{"entity" : "not-have-patient-location"}
+    - [não quero compartilhar] minha localização{"entity":"not-have-patient-location"}
+    - [não quero compartilhar]{"entity":"not-have-patient-location"}
+    - [não quero compartilhar minha localização]{"entity":"not-have-patient-location"}
+
+- intent: send-info-postal-code
+  examples: |
+    - [60833-285]{"entity": "have-patient-postal-code"}
+    - [60441005]{"entity":  "have-patient-postal-code"}
+    - [60337260]{"entity": "have-patient-postal-code"}
+    - [60531350]{"entity": "have-patient-postal-code"}
+    - [60833-386]{"entity": "have-patient-postal-code"}
+    - [61920-550]{"entity": "have-patient-postal-code"}
+
+- intent: send-info-gender
+  examples: |
+    - [prefiro não informar meu genero]{"entity":"not-have-patient-gender"}
+    - [prefiro não dizer meu genero]{"entity":"not-have-patient-gender"}
+    - [prefiro não declarar meu gereno]{"entity":"not-have-patient-gender"}
+    - [prefiro não declarar]{"entity":"not-have-patient-gender"}
+    - [outro genero]{"entity":"not-have-patient-gender"} 
+    - sou [homem]{"entity": "have-patient-gender"}
+    - [homem]{"entity": "have-patient-gender"}
+    - [masculino]{"entity": "have-patient-gender"}
+    - meu genero é [masculino]{"entity": "have-patient-gender"}
+    - [nenhum desses genero]{"entity":"not-have-patient-gender"}
+    - [nenhum genero que está ai]{"entity": "not-have-patient-gender"}
+    - sou [mulher]{"entity": "have-patient-gender-f"}
+    - [mulher]{"entity": "have-patient-gender-f"}
+    - [feminino]{"entity": "have-patient-gender-f"}
+    - [menina]{"entity": "have-patient-gender-f"}
+    - [moça]{"entity": "have-patient-gender-f"}
+    - sou uma [menina]{"entity": "have-patient-gender-f"}
+    - sou uma [mulher]{"entity": "have-patient-gender-f"}
+    - meu genero é [feminino]{"entity": "have-patient-gender-f"}
+
+- intent: send-info-pregnant-info
+  examples: |
+    - [não]{"entity": "have-patient-pregnant-info"}
+    - [sim]{"entity": "have-patient-pregnant-info"}
+    - [não estou gravida]{"entity": "have-patient-pregnant-info"}
+    - [sim estou gravida]{"entity": "have-patient-pregnant-info"}
+    - [estou esperando um bebê]{"entity": "have-patient-pregnant-info"}
+    - [estou gravida]{"entity": "have-patient-pregnant-info"}
+    - [sim estou]{"entity": "have-patient-pregnant-info"}
+    
+- intent: send-info-diagnostic-system
+  examples: |
+    - [diagnostico afirmativo]{"entity":"have-diagnostic-system-positive"}
+    - [diagnostico positivo]{"entity":"have-diagnostic-system-positive"}
+    - [diagnostico negativo]{"entity":"not-have-diagnostic-system-positive"}
+    - [diagnostico falso]{"entity":"not-have-diagnostic-system-positive"}
+
+- intent: send-info-phone-number
+  examples: |
+    - [(88) 993053421]{"entity" : "have-patient-phone-number"}
+    - [(88)993053421]{"entity" : "have-patient-phone-number"}
+    - [(88) 99305-3421]{"entity" : "have-patient-phone-number"}
+    - [(88)99305-3421]{"entity" : "have-patient-phone-number"}
+    - [88993053421]{"entity" : "have-patient-phone-number"}
+    - [(85) 993053421]{"entity" : "have-patient-phone-number"}
+    - [(85) 913253421]{"entity" : "have-patient-phone-number"}
+
+- intent: can-start-online-service
+  examples: |
+    - Ir para o serviço online
+    - Serviço online
+    - Começar o serviço online
+    - No serviço online
+    - Na opção serviço online
+    - Atendimento online sobre o novo Coronavírus (COVID-19)
+    - Atendimento online sobre o novo Coronavírus
+
+- intent: can-show-info-others
+  examples: |
+    - outras informações
+    - mostrar outras informações
+    - me mostre outras informações
+
+- intent: can-show-info-mental-health
+  examples: |
+    - Mostrar informações sobre a saúde mental
+    - Saude mental 
+    - Informações sobre a saúde mental
+    - Me mostre sobre saúde mental
+    - Mostre sabre a saúde mental
+    - Quero saber mais sobre a saúde mental
+
+- intent: can-show-info-about-covid
+  examples: |
+    - Informações sobre o novo Coronavírus
+    - Informações sobre o novo coronavirus
+    - informações sobre o novo coronavirus
+    - Mostrar informações sobre o Coronavírus
+    - informações sobre o coronavírus
+    - preciso de informações sobre coronavirus 
+    - 2 informações sobre o Coronavírus
+    - ?informações sobre o coronaVírus
+
+- intent: can-show-info-new-coronavirus
+  examples: |
+    - O que é novo Coronavírus (COVID-19)?  
+    - O que é novo o Coronavírus (COVID-19)?  
+    - o que é covid 
+    - o que é o virús da covid
+    - O que é Coronavírus (COVID-19)?  
+
+- intent: can-show-info-protect
+  examples: |
+    - como faço pra me proteger da doença ?
+    - proteção contra o covid 
+    - como me proteger do covid 
+    - como faço para me proteger
+    - como devo me proteger 
+
+- intent: can-show-info-treatments
+  examples: |
+    - Quais os tratamentos para covid ?
+    - quais os principais tratamentos
+    - como me tratar da doença
+    - Tratamento para o covid
+    - Qual o tratamento
+
+- intent: can-show-info-riscs
+  examples: |
+    - Quais os riscos da covid ?
+    - Quais são os riscos
+    - qual o risco do corona virus
+    - quais os riscos do novo corona virus ? 
+
+- intent: can-show-info-when-feel-symptoms
+  examples: |
+    - O que fazer quando sentir os sintomas ?
+    - O que preciso fazer quando sentir os sintomas da covid ?
+    - Sinto os sintomas, o que devo fazer? 
+    - Estou sentindo o sintomas da covid, o que devo fazer ?
+    - como proceder quando sentir os sintomas ?
+
+- intent: can-show-info-myths-truths-covid
+  examples: |
+    - Mitos e verdades sobre a doença
+    - O que é verdade sobre o covid
+    - Quais os mitos relacionado a doença
+    - Quais os mitos e verdades sobre o corona vírus?
+    
+- intent: can-show-info-covid-ce
+  examples: |
+    - novo Corona vírus no Estado do Ceará
+    - Corona vírus no Ceará
+    - Covid no Ceará
+    - Covid no CE
+    - corona virus no ce
+    - Corona vírus no estado ce
+
+
+- intent: can-show-info-about-main-prevention-measure
+  examples: |
+    - Quais as principais medidas de prevenção 
+    - Quais as medidas de prevenção?
+    - Prevenções para o covid
+    - prevenções para o novo corona virus 
+    - principais prevenções
+
+- intent: can-show-info-about-wear-mask
+  examples: |
+    - Devo usar máscara?
+    - É preciso usar mascara?
+    - É necessario usar mascara
+    - precisa usar mascara?
+
+- intent: can-show-info-about-homemade-mask-look-like
+  examples: |
+    - Como deve ser a minha máscara caseira?
+    - como deve ser a minhas mascara feita em casa?
+    - Que jeito tem que ser uma mascara caseira
+    - mascara caseira
+    - máscara feita em casa
+
+- intent: can-show-info-about-homemade-mask-use
+  examples: |
+    - Posso usar minha máscara caseira mais de uma vez?
+    - Quantas vezes posso usar a minha mascara feita em casa
+
+- intent: can-show-info-about-wash-hands-correctly
+  examples: |
+    - Como lavar as mãos da maneira correta?
+    - Como preciso lavar as mãos de forma correta?
+
+- intent: can-show-info-about-health-professional-protection
+  examples: |
+    - Como os proficionais de saúde podem se proteger do novo Coronavírus? 
+    - Como os proficionais de saude devem se proteger do novo Coronavirus?
+
+- intent: can-show-info-about-disease-present-itself
+  examples: |
+    - Como essa doença se apresenta?
+    - Como o virus se apresenta?
+
+- intent: can-show-info-about-disease-spread
+  examples: |
+    - Como essa doença se espalha?
+    - Como se espalha a doença?
+
+- intent: can-show-info-about-disease-transmitted-through-the-air
+  examples: |
+    - Essa doença é transmitida pelo ar? 
+    - o ar transmite a doença?
+
+- intent: can-show-info-about-worried-about-this-disease
+  examples: |
+    - Devo me preocupar com essa doença ?
+    - Essa doença é preocupante?
+
+- intent: can-show-info-about-the-risk-group
+  examples: |
+    - Quem é o grupo de risco?
+    - Quem corre risco?
+
+
+- intent: can-show-info-about-should-see-the-doctor
+  examples: |
+    - Não me sinto bem. Devo procurar um médico ?
+    - estou mal. Devo procurar um médico?
+
+- intent: can-show-info-about-where-to-get-care
+  examples: |
+    - Onde buscar atendimento ?
+    - Onde tem atendimento?
+
+- intent: can-show-info-about-the-diagnostic-of-the-covid
+  examples: |
+    - Como é feito o diagnóstico do novo Coronavírus ?
+    - Como é feito o diagnostico do virus?
+
+- intent: can-show-info-about-who-is-the-exam-for
+  examples: |
+    - Para quem o exame é indicado ?
+    - Para quem é indicado o exxame?
+
+- intent: can-show-info-about-home-isolation
+  examples: |
+    - O que é isolamento domiciliar ?
+    - O que seria isolamento domiciliar?
+
+- intent: can-show-info-about-when-home-isolation-is-necessary
+  examples: |
+    - Quando é preciso fazer isolamento domiciliar?
+    - Quando o isolamento é necessario?
+
+- intent: can-show-info-about-social-distancing
+  examples: |
+    - O que é distanciamento social?
+    - O que significa distanciamento social?
+
+- intent: can-show-info-about-the-cases-need-hospitalization
+  examples: |
+    - Todo caso de COVID-19 precisa ser internado no hospital ?
+    - Todo caso de covid é necessario ser internado no hospital?
+
+- intent: can-show-info-about-pets-spread-covid
+  examples: |
+    - Os animais de estimação podem espalhar o novo Coronavírus ?
+    - Animais domesticos ṕodem espalhar a doença?
+
+- intent: can-show-info-about-people-affected-by-covid
+  examples: |
+    - Quais as pessoas mais afetadas pelo novo Coronavírus? 
+    - Quis as peesoas que sofrem mais com o coronavirus?
+
+- intent: can-show-info-about-antibiotics-effects
+  examples: |
+    - Os antibióticos são eficazes na prevenção e no tratamento do novo Coronavírus?
+    - Os  antibioticos tem efeito na prevenção?
+
+- intent: can-show-info-about-medicine-for-covid
+  examples: |
+    - Posso tomar algum remédio para prevenir ou tratar novo Coronavírus ?
+    - Posso tomar algum rémedio pra prevenir
+
+- intent: can-show-info-about-covid-survive-in-surface
+  examples: |
+    - Quanto tempo o novo Coronavírus sobrevive em superfícies ?
+    - Quantos dias o virus sobrevive no ambiente?
+
+- intent: can-show-info-about-covid-kill
+  examples: |
+    - O novo Coronavírus pode matar ?
+    - É possivel a covid matar?
+
+- intent: can-show-info-about-the-restrictions-to-buy
+  examples: |
+    - Há restições para comprar mercadorias vindas de países com casos confirmados da doença ?
+    - É proibido comprar em paisses com casos confirmados?
+    
+- intent: can-show-ask-user-grade
+  examples: |
+    - Finalizar
+    - Encerrar 
+    - Terminar
+    - Acabar
+    - Ir para o fim
+    - 
+
+- intent: can-back-dialog
+  examples: |
+    - voltar
+    - voltar para o menu
+    - menu
+    - voltar ao menu
+    
+- intent: send-grade
+  examples: |
+    - nota 10
+    - nota 1
+    - nota 2
+    - nota 3
+    - nota 4
+    - nota 5
+
+- intent: can-go-error-treatment
+  examples: |
+    - error
+    - erro 
+    - err
+
+- intent: can-do-human-take-control-dialog
+  examples: |
+    - conversando com o paciente
+    - controlando o díalogo
+
+
+- intent: can-show-info-main-symptoms
+  examples: |
+    - Quais são os principais sintomas?
+    - principais sintomas?
+    - QUAIS OS PRINCIPAIS SINTOMAS?
+    - são os principais sintomas
+    - Quais são os principais sintomas

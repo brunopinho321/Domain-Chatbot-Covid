@@ -1,0 +1,25 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: call agent
+  steps:
+  - intent: send-info-phone-number
+  - action: global_action
+  - action: wait_utter
+  - action: wait_utter
+  - action: wait_utter
+  - action: wait_utter
+  - action: wait_utter
+  - action: wait_utter
+  - action: wait_utter
+  - action: call_agent

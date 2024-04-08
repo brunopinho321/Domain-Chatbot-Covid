@@ -1,0 +1,128 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - user-initiative
+  - can-start-online-service
+  - can-show-info-others
+  - can-show-info-mental-health
+  - can-show-info-about-covid
+  - can-show-info-new-coronavirus
+  - can-show-info-protect
+  - can-show-info-treatments
+  - can-show-info-riscs
+  - can-show-info-when-feel-symptoms
+  - can-show-info-myths-truths-covid
+  - can-show-info-covid-ce
+  - can-show-info-about-main-prevention-measure
+  - can-show-info-about-wear-mask
+  - can-show-info-about-homemade-mask-look-like
+  - can-show-info-about-homemade-mask-use
+  - can-show-info-about-wash-hands-correctly
+  - can-show-info-about-health-professional-protection
+  - can-show-info-about-disease-present-itself
+  - can-show-info-about-disease-spread
+  - can-show-info-about-disease-transmitted-through-the-air
+  - can-show-info-about-worried-about-this-disease
+  - can-show-info-about-the-risk-group
+  - can-show-info-about-should-see-the-doctor
+  - can-show-info-about-where-to-get-care
+  - can-show-info-about-the-diagnostic-of-the-covid
+  - can-show-info-about-who-is-the-exam-for
+  - can-show-info-about-home-isolation
+  - can-show-info-about-when-home-isolation-is-necessary
+  - can-show-info-about-social-distancing
+  - can-show-info-about-the-cases-need-hospitalization
+  - can-show-info-about-pets-spread-covid
+  - can-show-info-about-people-affected-by-covid
+  - can-show-info-about-antibiotics-effects
+  - can-show-info-about-medicine-for-covid
+  - can-show-info-about-covid-survive-in-surface
+  - can-show-info-about-covid-kill
+  - can-show-info-about-the-restrictions-to-buy
+  - can-show-info-main-symptoms
+  - can-call-diagnostic-system
+  - can-show-ask-user-grade
+  - can-start-dialog
+  - can-back-dialog
+  - send-grade
+  - send-info-name
+  - send-info-cpf
+  - send-info-birthday
+  - send-info-comorbidities
+  - send-info-symptoms
+  - send-info-days-symptoms
+  - send-info-location
+  - send-info-postal-code
+  - send-info-gender
+  - send-info-gender-f
+  - send-info-pregnant-info
+  - send-info-diagnostic-system
+  - send-info-phone-number
+  - can-go-error-treatment
+  - can-do-human-take-control-dialog
+  
+
+actions:
+  - global_action
+  - call_agent
+  - wait_utter
+
+entities:
+  - have-patient-name
+  - have-patient-cpf
+  - have-patient-birthday
+  - have-patient-comorbidities
+  - have-patient-symptoms
+  - have-patient-days-symptoms
+  - have-patient-location
+  - not-have-patient-location
+  - have-patient-postal-code
+  - have-patient-gender
+  - not-have-patient-gender
+  - not-have-diagnostic-system-positive
+  - have-patient-gender-f
+  - have-patient-pregnant-info
+  - have-patient-phone-number
+  - have-diagnostic-system-positive
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_wait:
+    - text: ""
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+
+
+
+
+
